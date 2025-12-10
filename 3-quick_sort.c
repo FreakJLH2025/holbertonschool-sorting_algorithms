@@ -33,7 +33,7 @@ for (j = low; j < high; j++)
 if (array[j] < pivot)
 {
 i++;
-if (i != j)
+if (i != j && array[i] != array[j])
 {
 swap_ints(&array[i], &array[j]);
 print_array(array, size);
@@ -41,7 +41,7 @@ print_array(array, size);
 }
 }
 
-if (i + 1 != high)
+if (array[i + 1] != array[high])
 {
 swap_ints(&array[i + 1], &array[high]);
 print_array(array, size);
